@@ -1,0 +1,21 @@
+import random
+
+def guess_game():
+    number = random.randint(1, 10)
+    tries = 0
+
+    while tries < 3:
+        guess = int(input("Rate eine Zahl zwischen 1 und 10: "))
+        tries += 1
+
+        if guess < number:
+            print("Zu niedrig!")
+        elif guess > number:
+            print("Zu hoch!")
+        else:
+            print("Richtig! Du hast gewonnen!")
+            break
+    else:
+        print(f"Du hast verloren! Die richtige Zahl war {number}.")
+
+guess_game()
